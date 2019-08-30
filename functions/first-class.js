@@ -28,3 +28,17 @@ function sum(a, b) {
 }
 
 sum(10, 3)(8);
+
+//Dynamic parameters
+function newSum() {
+    let newSum = 0;
+    for (i in arguments) {
+        newSum += arguments[i];
+    }
+    return newSum;
+}
+
+console.log(newSum());
+console.log(newSum(1));
+console.log(newSum(1, 40, 2, 99));
+console.log(newSum(9.9, 5.2, "something's wrong"));
