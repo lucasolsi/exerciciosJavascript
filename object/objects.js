@@ -35,3 +35,23 @@ console.log(phone)
 //delete phone.installedApps
 console.log(phone)
 console.log(phone.installedApps.length)
+
+const attrName = 'rating'
+const attrValue = 8.99
+
+const obj3 = {}
+obj3[attrName] = attrValue
+console.log(obj3)
+
+const obj4 = { [attrName]: attrValue }
+console.log(obj4)
+
+const obj5 = {
+    something: function () {
+        //...
+    },
+    function() {
+        //...
+    }
+}
+console.log(obj5)
