@@ -9,7 +9,7 @@ const lowerSallary = (empl, currentEmpl) => {
 
 axios.get(url).then(response => {
     const employers = response.data;
-    console.log(employers);
+    //console.log(employers);
 
     const empl = employers.filter(fromChina).filter(isWoman).reduce(lowerSallary);
     console.log(empl);
