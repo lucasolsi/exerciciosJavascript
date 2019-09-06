@@ -15,6 +15,14 @@ const getTurma = (char, callback) => {
 
 let names = [];
 getTurma('A', alunos => {
-    names = names.concat(alunos.map(a => `A: ${a.name}`));
+    names = names.concat(alunos.map(a => `A: ${a.nome}`));
     console.log(names);
+    getTurma('B', alunos => {
+        names = names.concat(alunos.map(a => `B: ${a.nome}`));
+        console.log(names);
+        getTurma('C', alunos => {
+            names = names.concat(alunos.map(a => `C: ${a.nome}`));
+            console.log(names);
+        })
+    })
 })
