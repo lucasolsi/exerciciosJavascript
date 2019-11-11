@@ -1,0 +1,95 @@
+<h1>Project</h1>
+<ul class="tree">
+    <li class="collapsible">Backend</li>
+    <ul class="content">
+        <li>app.js</li>
+        <li>test.js</li>
+        <li class="collapsible">package.json</li>
+        <ul class="content">
+            <li>http-server</li>
+            <li>lodash</li>
+        </ul>
+        <li class="collapsible">config</li>
+        <ul class="content">
+            <li>routes.js</li>
+            <li>database.js</li>
+        </ul>
+    </ul>
+    <li class="collapsible">Frontend</li>
+    <ul class="content">
+        <li class="collapsible">public</li>
+        <ul class="content">
+            <li>app.css</li>
+            <li>app.js</li>
+            <li>index.html</li>
+        </ul>
+    </ul>
+</ul>
+
+<br>
+<ul class="tree">
+    <li>
+        <span folder>Backend</span>
+        <ul>
+            <li>app.js</li>
+            <li>test.js</li>
+            <li>
+                <span folder>package.json</span>
+                <ul>
+                    <li>http-server</li>
+                    <li>lodash</li>
+                </ul>
+            </li>
+
+            <li> <span folder>config</span>
+                <ul>
+                    <li>routes.js</li>
+                    <li>database.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span folder>Frontend</span>
+        <ul>
+            <li>
+                <span folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="tree.css">
+<link rel="stylesheet" href="collapsible.css">
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => {
+        folder.onclick = function (e) {
+            const ul = folder.nextElementSibling
+            const current_display = ul.style.display
+            ul.style.display = current_display === 'none' ? 'block' : 'none'
+
+        }
+    })
+</script>
