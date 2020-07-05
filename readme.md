@@ -1,4 +1,4 @@
-# Repository created during the course Web Moderno com Javascript 2019 Completo + projetos.
+# Repository created during the course Web Moderno com Javascript 2020 Completo + projetos.
 
 ## Including:
 - Javascript
